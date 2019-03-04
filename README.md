@@ -1,6 +1,7 @@
 # Symfony
 
 #Full stack project worked in symfony where PHP is used for database actions and JS for fronted part.
-#Project is still not 100% finished but I'll make updates soon.
+#Project is still not 100% finished in fronted part but I'll make updates soon.
 
-#Vendor file is missing so it requires composer update.
+#Vendor folder missing
+#Var folder missing
