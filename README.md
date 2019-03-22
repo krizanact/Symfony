@@ -1,7 +1,16 @@
-# Symfony
+## Symfony
 
-#Full stack project worked in symfony where PHP is used for database actions and JS for fronted part.
-#Project is still not 100% finished in fronted part but I'll make updates soon.
+Full stack project worked in symfony where PHP is used for database actions and JS for fronted part.
+Project is still not 100% finished in fronted part but I'll make updates soon.
 
-#Vendor folder missing
-#Var folder missing
+Required: 
+   
+         composer install
+         
+## Theme
+
+Theme of this project is quite similar as this theme that I described above in Laravel project. The
+biggest difference is that this is full stack project where I used Symfony/PHP as backend and I've done
+more things with database then in the project before.
+I used Javascript (jQuery and Ajax requests) for fronted part and all changes on fronted .
+All technologies used: Symfony/PHP, HTML, CSS, Bootstrap and Javascript(jQuery/Ajax).
