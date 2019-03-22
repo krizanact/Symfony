@@ -1,0 +1,59 @@
+<style>
+
+    a{
+        color:lightskyblue;
+    }
+    a:hover{
+        background-color:limegreen;
+    }
+    #link:hover{
+        background-color:limegreen;
+    }
+    .dropdown-item{
+        color:lightskyblue;
+    }
+    .nav-link{
+        color:white;
+    }
+
+</style>
+
+<nav class="nav navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container">
+        <a href="/" class="navbar-brand">Homepage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile-nav">
+            <ul class="navbar-nav ml-auto"> </ul>
+
+            {% if is_granted(expression(
+                '"ROLE_USER" in roles or (not is_anonymous())'
+                )) %}
+
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ app.user.name }} <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right navbar-inverse bg-dark ">
+
+                        <a href="{{ path('logout') }}" class="dropdown-item" id="link">Logout</a>
+                    </a>
+                    <form id="logout-form" action="{{ path('logout') }}" method="POST" style="display: none;">
+
+                    </form>
+                </div>
+            </li>
+
+
+            {% else %}
+                <a href="/login" class="nav-link">Login</a>
+                <a href="/register" class="nav-link">Register</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</nav>

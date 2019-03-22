@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Edit Article{% endblock %}
+
+{% block body %}
+
+                        {{ form_start(form) }}
+                        <td><label>Select: </label>
+                            {{ form_row(form.type) }}</td>
+                        <td><label>Upload: </label>
+                            {{ form_row(form.doc_upload)}}</td>
+                                <br>
+                        <td><button type="submit" class="btn btn-primary">Edit</button>
+                             </td>
+                        {{ form_end(form) }}
+
+
+
+
+
+{% endblock %}

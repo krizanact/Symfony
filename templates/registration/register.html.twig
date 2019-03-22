@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register page{% endblock %}
+
+{% block body %}
+    {% if is_granted(expression(
+        '"ROLE_USER" in roles or (not is_anonymous())'
+        )) %}
+    <h3>Registration is not possible while user is in session! </h3>
+    <h3> Please log out first to proceed with  new user registration.</h3>
+    {% else %}
+    <h2 class="h3 mb-3 font-weight-normal"> Please do registration and then you'll be redirected to login page!</h2>
+
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.name) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.password.first) }}
+        {{ form_row(registrationForm.password.second) }}
+        <br>
+        <button class="btn btn-primary">Register</button>
+    {{ form_end(registrationForm) }}
+    {% endif %}
+{% endblock %}
